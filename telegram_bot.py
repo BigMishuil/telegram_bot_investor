@@ -6,7 +6,7 @@ from aiogram.utils import executor
 
 
 HELP_COMMAND = """
-Write the ticker of the company of the company you need information about.
+Write the ticker of the company you need information about.
 """
 
 bot = Bot(BOT_API_TOKEN)
