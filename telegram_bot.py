@@ -1,15 +1,18 @@
+import os
 import requests
-from config import API_TOKEN, BOT_API_TOKEN
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
+from dotenv import load_dotenv
 
+load_dotenv()
 
 HELP_COMMAND = """
 Write the ticker of the company you need information about.
 """
 
-bot = Bot(BOT_API_TOKEN)
+API_TOKEN = os.getenv("API_TOKEN")
+bot = Bot(os.getenv("BOT_API_TOKEN"))
 dp = Dispatcher(bot)
 
 

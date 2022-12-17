@@ -1,6 +1,9 @@
-import requests
+import os
 from pprint import pprint
-from config import API_TOKEN
+import requests
+
+
+API_TOKEN = os.getenv("API_TOKEN")
 
 
 def get_info_about_the_company(ticker, API_TOKEN):
